@@ -1,10 +1,16 @@
-import { useState } from "react";
+
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { GlobalContext } from "./Context/GlobalContext";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+// eslint-disable-next-line react/prop-types
+const Navbar = () => {
 
-const Navbar = ({tema , toggleTema}) => {
   const navigate = useNavigate();
+
+  const{theme,toggleTheme} = useContext(GlobalContext)
+
   return (
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
@@ -19,7 +25,7 @@ const Navbar = ({tema , toggleTema}) => {
         <h4>Favoritos</h4>
       </Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleTema}  >Change theme {tema === "App" ? "Dark" : "Light"}</button>
+      <button onClick={toggleTheme}  >Change theme {theme === "App" ? "Dark" : "Light"}</button>
 
     </nav>
   )

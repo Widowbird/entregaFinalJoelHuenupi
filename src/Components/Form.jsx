@@ -22,7 +22,7 @@ const Form = () => {
       const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-      if(contact.nombreCompleto.length>=3 && !regexNum.test(contact.nombreCompleto) && regexEmail.test(contact.correo)){
+      if(contact.nombreCompleto.length>=5 && !regexNum.test(contact.nombreCompleto) && regexEmail.test(contact.correo)){
           setcard(true);
       }else{
           setError(true)
@@ -38,7 +38,7 @@ const Form = () => {
             <label htmlFor="">Correo electronico</label>
             <input type="text" onChange={(e) => setContact({ ...contact, correo: e.target.value })} />
             <button>Enviar</button>
-            {error ? (<h4 style={{ color: "red" }}>Coloque la información correcta</h4>) : null}
+            {error ? (<h4 style={{ color: "red" }}>Por favor verifique su información nuevamente</h4>) : null}
           </form>
         )
       }

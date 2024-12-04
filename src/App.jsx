@@ -6,20 +6,16 @@ import Home from "./Routes/Home";
 import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact";
-import { useState } from "react";
+import { useContext } from "react";
+import { GlobalContext } from "./Components/Context/GlobalContext";
 
 
-function App() {
-  const [dark,setDark] = useState("App");
-  const toggle = () =>{
-    setDark((prevThem) => (prevThem === "App" ? "dark" : "App"))
-  }
-
-
+function App() {  
+  const{theme} = useContext(GlobalContext);
 
   return (
-      <div className={dark}>
-          <Navbar tema = {dark} toggleTema = {toggle}/>
+      <div className={theme}>
+          <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
