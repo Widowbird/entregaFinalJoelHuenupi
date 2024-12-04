@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -8,15 +9,14 @@ import { GlobalProvider } from './Components/Context/GlobalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <GlobalProvider>
-        
-            <App/>
-        
-      </GlobalProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <GlobalProvider>
+      
+          <App/>
+      
+    </GlobalProvider>
+  </BrowserRouter>
+
 );
 
 

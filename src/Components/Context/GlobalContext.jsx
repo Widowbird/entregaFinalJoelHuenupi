@@ -12,6 +12,7 @@ export const GlobalProvider = ({ children }) => {
   const [theme, setTheme] = useState("App");
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [favs,setFavs] = useState([])
 
   const url = "https://jsonplaceholder.typicode.com/users";
 
@@ -40,7 +41,7 @@ export const GlobalProvider = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ theme, toggleTheme, users, loading, fetchUsers }}>
+    <GlobalContext.Provider value={{ theme, toggleTheme, users, loading, fetchUsers,favs,setFavs }}>
       {children}
     </GlobalContext.Provider>
   );

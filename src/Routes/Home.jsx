@@ -13,9 +13,7 @@ const Home = () => {
       <h1>Home</h1>
       <div className="card-grid">
         {/* Renderizado de las cards */}
-        {loading ? (
-          "Cargando..."
-        ) : (
+        {loading ? ( "Cargando...") : (
           users.map((user) => (
             <Card
               key={user.id} // Es importante proporcionar una key única
