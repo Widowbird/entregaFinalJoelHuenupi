@@ -1,15 +1,16 @@
-import { useContext } from 'react';
 import Card from '../Components/Card';
-import { GlobalContext } from '../Components/Context/GlobalContext';
+import { useValueState } from '../Components/Context/GlobalContext';
+
 
 // Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { users, loading } = useContext(GlobalContext); // Consumir datos del contexto
 
+  const { users, loading, theme} = useValueState(); // Consumir datos del contexto
+  
 
   return (
-    <main className="">
+    <main className={theme}>
       <h1>Home</h1>
       <div className="card-grid">
         {/* Renderizado de las cards */}

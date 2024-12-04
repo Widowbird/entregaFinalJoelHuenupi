@@ -19,14 +19,19 @@ code {
   cursor: pointer;
 }
 
+.favButton:hover{
+  border:solid rgb(206, 217, 142);
+
+}
+
 h1{
   text-align: center;
 }
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: space-around;
   padding: 1rem;
 }
 
@@ -47,7 +52,7 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 40px;
   margin-top: 2rem;
 }
@@ -78,6 +83,7 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 10px;
 }
 
 .card:hover{
@@ -120,3 +126,32 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+.dark nav{
+  background-color: #adadade1;
+}
+
+.dark nav h4{
+  color: white;
+}
+
+.dark .favButton{
+  background-color: rgba(136, 136, 136, 0.788);
+
+}
+
+.dark .card{
+  border: 0.5px solid rgb(184, 182, 182);
+
+}
+
+.dark .card h3{
+  color: rgba(247, 237, 95, 0.521);
+}
+
+.dark .card h4{
+  color: rgba(248, 236, 61, 0.521);
+}
+
+
+
