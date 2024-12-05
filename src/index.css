@@ -19,10 +19,25 @@ code {
   cursor: pointer;
 }
 
+.button{
+  width: 110px; 
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1%;
+}
+
+
 .favButton:hover{
   border:solid rgb(206, 217, 142);
 
 }
+
+
+.button:hover{
+  border:solid rgb(206, 217, 142);
+
+}
+
 
 h1{
   text-align: center;
@@ -136,6 +151,10 @@ tr:nth-child(even) {
 }
 
 .dark .favButton{
+  background-color: rgba(136, 136, 136, 0.788);
+
+}
+.dark .button{
   background-color: rgba(136, 136, 136, 0.788);
 
 }

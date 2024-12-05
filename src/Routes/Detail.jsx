@@ -11,7 +11,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userData = await fetchUserById(id); // Llama a la función del contexto
+        const userData = await fetchUserById(id);
         setUser(userData);
       } catch (error) {
         console.error("Error al obtener los datos del usuario:", error);
@@ -24,7 +24,7 @@ const Detail = () => {
     <div className={theme}>
       <h1>Detail Dentist ID: {id}</h1>
       {user ? (
-        <div>
+        <div className='card-grid'>
           <p><strong>Nombre:</strong> {user.name}</p>
           <p><strong>Email:</strong> {user.email}</p>
           <p><strong>Teléfono:</strong> {user.phone}</p>

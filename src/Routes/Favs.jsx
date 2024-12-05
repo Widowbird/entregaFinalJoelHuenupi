@@ -9,15 +9,12 @@ const Favs = () => {
     <div className={theme}>
       <h1>Dentists Favs</h1>
       {/* Botón para eliminar todos los favoritos */}
-      <button onClick={clearFavs} className="clear-button">
-        Eliminar Todos los Favoritos
-      </button>
       <div className="card-grid">
         {/* Renderiza los favoritos */}
         {favs.length > 0 ? (
           favs.map((user) => (
             <Card
-              key={user.id} // Es importante proporcionar una key única
+              key={user.id}
               name={user.name}
               username={user.username}
               id={user.id}
@@ -27,6 +24,9 @@ const Favs = () => {
           <p>No tienes favoritos seleccionados.</p>
         )}
       </div>
+      <button onClick={clearFavs} className="button">
+        Eliminar Todos los Favoritos
+      </button>
     </div>
   );
 };
